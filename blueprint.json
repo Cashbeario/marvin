@@ -1,0 +1,858 @@
+{
+  "name": "MARVIN AGI Cognition Engine v3.0",
+  "version": "3.0.0",
+  "description": "Multi-Agent Reasoning and Virtualized Intelligence Network — A brain-inspired, fully autonomous, self-improving multi-agent AGI framework combining Cognitive Workspace Architecture, Mixture of Multi-Agent Architecture, Society of Mind principles, Sovereign Domain Mesh, and Tribe v2 organization.",
+  "authors": ["Aether Neural"],
+  "license": "Proprietary — Internal Architecture Reference",
+  "architecture": {
+    "name": "MARVIN",
+    "core_principles": [
+      "Convergent design from biological intelligence",
+      "Minsky's Society of Mind as engineering primitive",
+      "Inner conflict as feature (not error)",
+      "Sovereign data ownership",
+      "Continuous self-improvement"
+    ],
+    "layers": [
+      {
+        "name": "User Vision / Goals",
+        "description": "Immutable intent — north star for all system behavior",
+        "components": ["Goal Parser", "Intent Validator"]
+      },
+      {
+        "name": "LLM Council",
+        "description": "Highest deliberative body for strategic decisions",
+        "components": ["Chair", "Members", "Debate Agent", "Vote Coordinator"]
+      },
+      {
+        "name": "Executive Agents",
+        "description": "System orchestration and meta-cognition",
+        "components": ["Orchestrator", "Metacognition Agent", "Observation Agent", "Genesis Agent", "Mediator Agent", "Scribe Agent", "AutoResearch Agent"]
+      },
+      {
+        "name": "Cognitive Workspace",
+        "description": "Blackboard architecture — single source of truth",
+        "components": ["Workspace Store", "Ignition Engine", "Broadcast Manager", "Inhibition Registry"]
+      },
+      {
+        "name": "Agent Ensemble",
+        "description": "Heterogeneous specialized agents",
+        "subsystems": [
+          {
+            "name": "Cognitive & Linguistic Agents",
+            "agents": ["Planner", "Reasoner", "Synthesizer", "Neuro-Symbolic", "Creative", "Debate"]
+          },
+          {
+            "name": "Perceptual Agents",
+            "agents": ["Vision", "Audio", "Code Perception", "Document", "SNN"]
+          },
+          {
+            "name": "Memory Agents",
+            "agents": ["Episodic", "Semantic", "Working", "Associative", "Compaction"]
+          },
+          {
+            "name": "Procedural Agents",
+            "agents": ["Tool Executor", "Shell", "SSH", "Browser", "Validator", "Monitor"]
+          },
+          {
+            "name": "Critic Agents",
+            "agents": ["Validator Agent", "Critic Quorum"]
+          }
+        ]
+      },
+      {
+        "name": "NATS JetStream Harness",
+        "description": "Nervous system — triggering, orchestration, replay",
+        "components": ["Streams", "Subjects", "Message Bus", "Replay Controller"]
+      },
+      {
+        "name": "Sovereign Domain Mesh + Tribe v2",
+        "description": "Federated node network and team organization",
+        "components": ["Domain Gateway", "Tribe Manager", "ACL Enforcement", "Cross-domain Router"]
+      },
+      {
+        "name": "MCP Skills & Tools",
+        "description": "Extensible capability layer",
+        "components": ["Skills MCP Server", "Tools MCP Server", "SSH MCP Server", "Code MCP Server", "Plugin Registry"]
+      }
+    ]
+  },
+  "cognitive_workspace": {
+    "schema_version": "1.0",
+    "phases": ["idle", "planning", "executing", "validating", "broadcasting", "done"],
+    "ignition": {
+      "temperature_default": 0.7,
+      "weights": {
+        "urgency": 0.40,
+        "goal_similarity": 0.25,
+        "recency": 0.15,
+        "confidence": 0.20
+      },
+      "adaptive_threshold": {
+        "tau_0": 0.50,
+        "k_load": 0.20,
+        "k_conflict": 0.15,
+        "k_priority": 0.30
+      },
+      "normalization_beta": 0.5,
+      "broadcast_window_ms": 300,
+      "hysteresis": 0.10
+    },
+    "data_fusion": {
+      "continuous_state_estimation": "Kalman Filter (EKF/UKF)",
+      "discrete_evidence_combination": "Dempster-Shafer Theory",
+      "anomaly_detection": "LSTM-based anomaly scorer"
+    }
+  },
+  "agent_taxonomy": {
+    "cognitive_linguistic": [
+      {
+        "name": "Planner Agent",
+        "model_backend": "Claude Opus / GPT-4-class",
+        "function": "Goal decomposition, plan emission"
+      },
+      {
+        "name": "Reasoner Agent",
+        "model_backend": "Claude Sonnet / Qwen3-35B",
+        "function": "Multi-step logical inference"
+      },
+      {
+        "name": "Synthesizer Agent",
+        "model_backend": "LLM (configurable)",
+        "function": "Output generation from multiple inputs"
+      },
+      {
+        "name": "Neuro-Symbolic Agent",
+        "model_backend": "LLM + symbolic solver",
+        "function": "Formal verification, constraint satisfaction"
+      },
+      {
+        "name": "Creative Agent",
+        "model_backend": "LLM (high temperature)",
+        "function": "Novel ideation, metaphor generation"
+      },
+      {
+        "name": "Debate Agent",
+        "model_backend": "LLM (adversarial)",
+        "function": "Devil's advocate, hypothesis stress-testing"
+      }
+    ],
+    "perceptual": [
+      {
+        "name": "Vision Agent",
+        "architecture": "ViT / CNN",
+        "modality": "Image, video, screen capture"
+      },
+      {
+        "name": "Audio Agent",
+        "architecture": "Whisper-class",
+        "modality": "Speech-to-text, sound classification"
+      },
+      {
+        "name": "Code Perception Agent",
+        "architecture": "Tree-sitter AST",
+        "modality": "Source code structure extraction"
+      },
+      {
+        "name": "Document Agent",
+        "architecture": "PDF/DOCX parser",
+        "modality": "Structured document ingestion"
+      },
+      {
+        "name": "SNN Agent",
+        "architecture": "Spiking Neural Net",
+        "modality": "Time-series, real-time sensor streams"
+      }
+    ],
+    "memory": [
+      {
+        "name": "Episodic Memory Agent",
+        "storage": "Vector DB (pgvector / Qdrant)",
+        "function": "Multi-modal episode storage and retrieval"
+      },
+      {
+        "name": "Semantic Memory Agent",
+        "storage": "Knowledge Graph (Neo4j)",
+        "function": "Factual world knowledge, entity relations"
+      },
+      {
+        "name": "Working Memory Agent",
+        "storage": "Redis",
+        "function": "Short-term in-flight state"
+      },
+      {
+        "name": "Associative Memory Agent",
+        "storage": "Graph + Vector hybrid",
+        "function": "Entity relationship tracking"
+      },
+      {
+        "name": "Compaction Agent",
+        "storage": "LLM summarizer",
+        "function": "Context window compression with loss budgets"
+      }
+    ],
+    "procedural": [
+      {
+        "name": "Tool Executor Agent",
+        "type": "deterministic",
+        "function": "MCP tool call dispatcher"
+      },
+      {
+        "name": "Shell Agent",
+        "type": "deterministic",
+        "function": "Bash / system command execution"
+      },
+      {
+        "name": "SSH Agent",
+        "type": "deterministic",
+        "function": "Remote VPS execution via SSH"
+      },
+      {
+        "name": "Browser Agent",
+        "type": "playwright",
+        "function": "Web automation"
+      },
+      {
+        "name": "Validator Agent",
+        "type": "rule-based",
+        "function": "Schema, format, constraint checking"
+      },
+      {
+        "name": "Monitor Agent",
+        "type": "metrics collector",
+        "function": "System health, latency, error rates"
+      }
+    ],
+    "executive": [
+      {
+        "name": "Orchestrator Agent",
+        "function": "CWA workspace management, ignition cycle execution"
+      },
+      {
+        "name": "Metacognition Agent",
+        "function": "Monitors own cognitive processes, introspects workspace"
+      },
+      {
+        "name": "Observation Agent",
+        "function": "System-wide performance analysis, improvement proposals"
+      },
+      {
+        "name": "Genesis Agent",
+        "function": "Creates new agents when novel task types are detected"
+      },
+      {
+        "name": "Mediator Agent",
+        "function": "Conflict resolution between disagreeing agents"
+      },
+      {
+        "name": "Scribe Agent",
+        "function": "Maintains SOR, generates audit trails"
+      },
+      {
+        "name": "AutoResearch Agent (ARA)",
+        "function": "Cognitive self-experimentation, overnight optimization"
+      }
+    ]
+  },
+  "nats_jetstream": {
+    "streams": [
+      {"name": "MARVIN_EVENTS", "purpose": "system-wide event bus"},
+      {"name": "MARVIN_WORKSPACE", "purpose": "workspace item publications"},
+      {"name": "MARVIN_PLANS", "purpose": "plan emissions and updates"},
+      {"name": "MARVIN_TOOLCALLS", "purpose": "MCP tool call requests and results"},
+      {"name": "MARVIN_SOR", "purpose": "system of record append stream"},
+      {"name": "MARVIN_SELFIMPROVE", "purpose": "observation and improvement proposals"},
+      {"name": "MARVIN_TRIBE", "purpose": "per-tribe communication channels", "dynamic": true},
+      {"name": "MARVIN_COUNCIL", "purpose": "LLM council deliberation messages"},
+      {"name": "MARVIN_BACKUP", "purpose": "backup triggers and state snapshots"},
+      {"name": "MARVIN_REPLAY", "purpose": "replay command channel"},
+      {"name": "MARVIN_ARA", "purpose": "AutoResearch experiment ledger"}
+    ],
+    "subject_pattern": "marvin.{domain}.{tribe_id}.{agent_id}.{message_type}.{version}",
+    "retention": {
+      "max_age_hours": 168,
+      "replicas": 3,
+      "max_msg_size_bytes": 8388608
+    }
+  },
+  "memory_architecture": {
+    "hierarchy": [
+      {"level": "L0", "name": "Working Memory", "backend": "Redis", "ttl": "session duration", "size_limit": "10 MB"},
+      {"level": "L1", "name": "Episodic Memory", "backend": "Vector DB", "ttl": "90 days", "size_limit": "unlimited"},
+      {"level": "L2", "name": "Semantic Memory", "backend": "Knowledge Graph", "ttl": "persistent", "size_limit": "unlimited"},
+      {"level": "L3", "name": "Associative Memory", "backend": "Graph + Vector hybrid", "ttl": "persistent", "size_limit": "unlimited"},
+      {"level": "L4", "name": "Procedural Memory", "backend": "Skills MCP + agent code", "ttl": "versioned", "size_limit": "unlimited"}
+    ],
+    "compaction": {
+      "trigger_threshold_pct": 75,
+      "keep_recent_messages": 8,
+      "entity_retention_target": 0.95,
+      "factual_retention_target": 0.80
+    }
+  },
+  "sovereign_domain_mesh": {
+    "sovereignty_rules": [
+      "Data stays in domain — no raw data leaves originating node without explicit consent",
+      "Model weights are local — fine-tuned models do not cross node boundaries without signed provenance",
+      "Results are shareable — processed outputs may be shared via the mesh",
+      "Audit trail is immutable — every cross-domain call is logged in both SORs"
+    ],
+    "transport": "NATS Leaf Nodes over mTLS",
+    "auth": "JWT with domain-scoped claims",
+    "discovery": "NATS service discovery + domain registry",
+    "routing": "Consistent hashing on domain_id + conversation_id",
+    "conflict_resolution": "Last-write-wins with vector clocks for non-critical state"
+  },
+  "tribe_v2": {
+    "lifecycle": ["FORMATION", "BRIEFING", "ACTIVE", "DELIBERATING", "REPORTING", "DISSOLVING"],
+    "roles": ["specialist", "generalist", "critic", "scribe"],
+    "role_inheritance_confidence_factor": 0.7,
+    "max_delegation_depth": 4,
+    "inter_tribe_subject_pattern": "tribe.{source}.to.{target}.{message_type}"
+  },
+  "llm_council": {
+    "chair": "Planner Agent",
+    "members": ["Reasoner Agent", "Debate Agent", "Critic Agent", "Metacognition Agent"],
+    "quorum": 3,
+    "vote_threshold": 0.67,
+    "max_deliberation_seconds": 300,
+    "human_override_subject": "marvin.council.override.v1"
+  },
+  "autoresearch_agent": {
+    "tribe_name": "tribe:autoresearch",
+    "components": [
+      "ARA Orchestrator Agent",
+      "Hypothesis Generator Agent",
+      "Experiment Runner Agent",
+      "ARA Critic Agent",
+      "ARA Scribe Agent",
+      "Regression Guard Agent"
+    ],
+    "evaluation_metric": "composite_fitness",
+    "eval_task_budget": 50,
+    "synthetic_fallback_tasks": 20,
+    "hypothesis_strategies": [
+      {"name": "local_search", "frequency": 0.50},
+      {"name": "hypothesis_driven", "frequency": 0.25},
+      {"name": "simplification", "frequency": 0.15},
+      {"name": "cross_pollination", "frequency": 0.10},
+      {"name": "radical_change", "frequency": 0.05}
+    ],
+    "safety": {
+      "max_single_param_change_pct": 50,
+      "max_params_per_experiment": 3,
+      "min_eval_tasks": 20,
+      "max_consecutive_crashes": 3,
+      "regression_halt_threshold_pct": 5
+    }
+  },
+  "system_of_record": {
+    "stream": "MARVIN_SOR",
+    "implementation": "NATS JetStream with file-backed persistence",
+    "replicas": 3,
+    "retention_days": 90,
+    "schema": {
+      "required_fields": ["sor_id", "sequence", "timestamp", "event_type", "agent_id", "payload", "previous_hash", "hash", "signature"]
+    },
+    "event_types": [
+      "task_start", "task_complete", "tool_call", "plan_emit", "council_decision",
+      "agent_created", "error", "mutation", "backup", "ara_experiment"
+    ]
+  },
+  "backup_resilience": {
+    "layers": [
+      {"level": "L1", "name": "Hot", "mechanism": "NATS JetStream replication", "rpo": "0s", "rto": "<5s"},
+      {"level": "L2", "name": "Warm", "mechanism": "Hourly snapshot to object storage", "rpo": "1h", "rto": "<2min"},
+      {"level": "L3", "name": "Cold", "mechanism": "Daily full backup to cold storage", "rpo": "24h", "rto": "<30min"},
+      {"level": "L4", "name": "SOR", "mechanism": "Continuous append-only stream", "rpo": "0s", "rto": "Full replay"}
+    ],
+    "circuit_breaker": {
+      "failure_threshold": 3,
+      "reset_timeout_seconds": 60,
+      "states": ["CLOSED", "OPEN", "HALF_OPEN"]
+    },
+    "byzantine_fault_tolerance": {
+      "high_stakes_validators": 3,
+      "consensus_required": 2
+    }
+  },
+  "apis": {
+    "rest": [
+      {"method": "POST", "endpoint": "/v1/tasks", "description": "Submit a new task"},
+      {"method": "GET", "endpoint": "/v1/tasks/{task_id}", "description": "Get task status"},
+      {"method": "DELETE", "endpoint": "/v1/tasks/{task_id}", "description": "Cancel a task"},
+      {"method": "GET", "endpoint": "/v1/workspace/{plan_id}", "description": "Inspect workspace state"},
+      {"method": "GET", "endpoint": "/v1/sor/{sequence}", "description": "Read SOR entry"},
+      {"method": "GET", "endpoint": "/v1/agents", "description": "List registered agents"},
+      {"method": "POST", "endpoint": "/v1/agents", "description": "Register new agent"},
+      {"method": "GET", "endpoint": "/v1/tribes", "description": "List tribes"},
+      {"method": "POST", "endpoint": "/v1/tribes", "description": "Create tribe"},
+      {"method": "POST", "endpoint": "/v1/council/override", "description": "Human override to council"},
+      {"method": "POST", "endpoint": "/v1/ara/halt", "description": "Halt AutoResearch"},
+      {"method": "POST", "endpoint": "/v1/ara/resume", "description": "Resume AutoResearch"},
+      {"method": "GET", "endpoint": "/v1/health", "description": "System health check"},
+      {"method": "GET", "endpoint": "/v1/metrics", "description": "Prometheus-format metrics"}
+    ],
+    "websocket": [
+      {"endpoint": "/v1/stream/{conversation_id}", "description": "Real-time workspace events streaming"}
+    ]
+  },
+  "security": {
+    "authentication": {
+      "agent_to_nats": "JWT with agent_id claim, signed by domain CA",
+      "cross_domain": "mTLS + domain-scoped JWT",
+      "human_users": "OAuth 2.0 / OIDC",
+      "mcp_servers": "Bearer token per server, rotated daily"
+    },
+    "authorization": {
+      "nats_subjects": "Access-controlled via NATS account/user permissions",
+      "workspace_items": "Tagged with owner_domain and access_policy",
+      "sor_entries": "Read-only for all agents except Scribe",
+      "council_decisions": "Require role: council_member claim"
+    },
+    "secrets_management": "External secrets manager (Vault / AWS Secrets Manager)"
+  },
+  "deployment": {
+    "minimum_viable": {
+      "nodes": 1,
+      "components": [
+        "NATS Server (JetStream enabled)",
+        "Orchestrator Process",
+        "2-4 Agent Processes",
+        "Skills MCP Server",
+        "Tools MCP Server",
+        "Redis",
+        "SQLite or Postgres"
+      ]
+    },
+    "production": {
+      "orchestrator": {"nodes": 2, "pattern": "active-passive"},
+      "nats_cluster": {"nodes": 3, "jetstream": true},
+      "tribe_pods": {"scaling": "Kubernetes HPA based on consumer lag"},
+      "memory_services": ["Redis cluster", "Qdrant", "Neo4j"],
+      "mcp_servers": ["skills", "tools", "ssh", "plugins"],
+      "llm_gateway": "Load balancer across model endpoints",
+      "metrics": ["Prometheus", "Grafana"],
+      "secrets": "Vault"
+    }
+  },
+  "open_problems_solutions": {
+    "credit_assignment": {
+      "name": "Counterfactual Contribution Tracing (CCT)",
+      "key_mechanisms": [
+        "Execution graph construction from SOR",
+        "Shadow replay pool (5% of tasks)",
+        "Second-best candidate substitution from inhibition log",
+        "Monte Carlo Shapley approximation for coalitions",
+        "Credit-weighted routing updates"
+      ]
+    },
+    "neuro_symbolic_robustness": {
+      "name": "Iterative Semantic Grounding with Divergence Detection (ISG-DD)",
+      "key_mechanisms": [
+        "N=3 independent translations with varied strategies/temperatures",
+        "Solver agreement, back-translation consistency, constraint coverage",
+        "Four-tier graduated response (0.00–0.20 → 0.75–1.00)",
+        "Symbolic solver sandbox with timeouts and memory caps",
+        "Partial formalization for verifiable cores",
+        "Translation quality database for difficulty classification"
+      ]
+    },
+    "temporal_dynamics": {
+      "name": "Adaptive Multi-Timescale Workspace (AMTW)",
+      "key_mechanisms": [
+        "Latency-tiered lanes: Fast (500ms), Medium (5s), Slow (60s)",
+        "Temporal Arbitrator for cross-lane synchronization",
+        "Provisional broadcasts with optimistic execution",
+        "Checkpointing and rollback on divergence",
+        "Temporal salience weighting with age and staleness terms"
+      ]
+    },
+    "emergent_specialization": {
+      "name": "Evolutionary Role Discovery (ERD)",
+      "key_mechanisms": [
+        "Agent genomes as structured configurations",
+        "Living population with active, standby, archive",
+        "Composite fitness selection (accuracy, latency, cost, breadth)",
+        "Mutation operators (skill add/remove, prompt refine, temperature shift)",
+        "Crossover for complementary skill combination",
+        "Niche discovery from low-fitness task clusters"
+      ]
+    },
+    "benchmarking": {
+      "name": "MARVIN Evaluation Suite (MES)",
+      "benchmarks": [
+        "Multi-Source Research with Citation Verification (200 tasks, 10 domains)",
+        "Code Generation with Spec Conformance Tests (150 tasks, 5 languages)",
+        "Spreadsheet Audit with Constraint Checking (100 tasks)",
+        "Multi-Modal QA with Late Sensor Arrivals (80 tasks, 3 delay levels)"
+      ],
+      "ablations": [
+        "Ignition vs FIFO vs Random vs Priority-only routing",
+        "Critic Quorum (3) vs Single Critic vs No Critic",
+        "CWA vs Monolith+Tools vs CWA w/o memory vs CWA w/o tribes",
+        "Dempster-Shafer vs Majority Vote vs Weighted Vote vs Highest Confidence"
+      ],
+      "statistical_rigor": {
+        "min_sample_size": 100,
+        "confidence_interval": 0.95,
+        "statistical_test": "Wilcoxon signed-rank",
+        "effect_size": "Cohen's d",
+        "inter_rater_reliability": "Cohen's κ ≥ 0.70"
+      },
+      "continuous_regression": {
+        "task_count": 40,
+        "trigger_events": ["orchestrator_update", "agent_promotion", "ignition_tuning", "weekly_baseline"],
+        "rollback_threshold_pct": 3
+      }
+    }
+  },
+  "configuration_defaults": {
+    "llm": {
+      "primary_model": "claude-opus-4-5",
+      "fallback_model": "claude-sonnet-4-6",
+      "cost_optimized_model": "claude-haiku-4-5-20251001",
+      "lmstudio_url": "http://localhost:1234",
+      "local_model": "qwen/qwen3.5-35b-a3b"
+    },
+    "context": {
+      "max_tokens": 80000,
+      "compact_threshold_pct": 0.75,
+      "compact_keep_recent": 8,
+      "max_agent_iterations": 500
+    },
+    "ignition": {
+      "temperature": 0.7,
+      "weight_urgency": 0.40,
+      "weight_goal_similarity": 0.25,
+      "weight_recency": 0.15,
+      "weight_confidence": 0.20,
+      "base_threshold": 0.50,
+      "k_load": 0.20,
+      "k_conflict": 0.15,
+      "k_priority": 0.30,
+      "broadcast_window_ms": 300,
+      "hysteresis": 0.10,
+      "buffer_comfort_size": 32,
+      "buffer_high_watermark": 128
+    },
+    "nats": {
+      "url": "nats://localhost:4222",
+      "cluster_id": "marvin-cluster",
+      "stream_retention_hours": 168,
+      "stream_replicas": 3
+    },
+    "memory": {
+      "working_memory_ttl_s": 3600,
+      "episodic_retention_days": 90,
+      "compaction_loss_budget_entities": 0.05,
+      "compaction_loss_budget_facts": 0.20,
+      "ema_alpha": 0.10
+    },
+    "circuit_breaker": {
+      "failure_threshold": 3,
+      "reset_timeout_s": 60
+    },
+    "backup": {
+      "l2_snapshot_interval_h": 1,
+      "l3_full_backup_interval_h": 24,
+      "object_storage_bucket": "marvin-backups"
+    },
+    "tribe": {
+      "max_delegation_depth": 4,
+      "role_inheritance_confidence_factor": 0.7
+    },
+    "council": {
+      "quorum": 3,
+      "vote_threshold": 0.67,
+      "max_deliberation_s": 300
+    },
+    "bft": {
+      "high_stakes_validators": 3,
+      "high_stakes_consensus": 2
+    },
+    "ara": {
+      "eval_task_budget": 50,
+      "synthetic_fallback_tasks": 20,
+      "max_consecutive_crashes": 3,
+      "digest_hour_utc": 6,
+      "checkpoint_retention_days": 7
+    }
+  },
+  "cognitive_function_mapping": {
+    "Perception": "Perceptual Agents → Workspace ingestion",
+    "Generation": "Synthesizer, Creative, Code Generator Agents",
+    "Attention": "Ignition Engine (salience scoring, winner-take-all broadcast)",
+    "Learning": "Observation Agent + Genesis Agent + Agent Memory Graphs",
+    "Memory": "Episodic, Semantic, Working, Associative Memory Agents",
+    "Reasoning": "Reasoner, Neuro-Symbolic, Debate Agents",
+    "Metacognition": "Metacognition Agent (workspace introspection, self-modeling)",
+    "Executive Functions": "Orchestrator, Planner, LLM Council",
+    "Problem Solving": "MoMoA routing → Tribe selection → Compositional chains",
+    "Social Cognition": "Tribe v2 protocol, Mediator Agent, LLM Council"
+  },
+  "minsky_principles_mapping": {
+    "Born with mental resources": "Pre-loaded agent ensemble with base skills",
+    "Learn from interacting with others": "Inter-agent message passing + episodic replay",
+    "Emotions as different Ways to Think": "Agent priority signals / urgency weights in ignition",
+    "Think about recent thoughts": "Metacognition Agent with rolling workspace introspection",
+    "Think on multiple levels": "Hierarchical agency: Orchestrator → Team → Specialist",
+    "Accumulate commonsense knowledge": "Semantic Memory Agent + Knowledge Graph",
+    "Switch among Ways to Think": "Dynamic tool/agent selection via salience scoring",
+    "Multiple ways to represent things": "Neuro-symbolic dual representation",
+    "Multiple models of self": "Self-model registry updated by Observation Agent"
+  },
+  "tasks": [
+    {
+      "id": "PHASE_0",
+      "name": "Phase 0: Foundation",
+      "status": "in-progress",
+      "tasks": [
+        {
+          "id": "T0.1",
+          "name": "NATS JetStream Core Setup",
+          "description": "Deploy 3-node cluster and define all required streams (EVENTS, WORKSPACE, PLANS, etc.)",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T0.2",
+          "name": "System of Record (SOR) Implementation",
+          "description": "Implement append-only ledger with cryptographic signatures and hash chaining",
+          "dependencies": ["T0.1"],
+          "status": "pending"
+        },
+        {
+          "id": "T0.3",
+          "name": "Basic Agent Runtime",
+          "description": "Implement agent registration, capability declaration, and base message handling",
+          "dependencies": ["T0.1"],
+          "status": "pending"
+        },
+        {
+          "id": "T0.4",
+          "name": "MCP Host Foundation",
+          "description": "Implement tool routing to skills/tools/ssh servers and tool discovery",
+          "dependencies": ["T0.3"],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PHASE_1",
+      "name": "Phase 1: Core Cognition",
+      "status": "pending",
+      "dependencies": ["PHASE_0"],
+      "tasks": [
+        {
+          "id": "T1.1",
+          "name": "Cognitive Workspace Store",
+          "description": "Implement blackboard architecture for shared state with defined JSON schema",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T1.2",
+          "name": "Ignition Engine v1",
+          "description": "Implement salience scoring with fixed weights and winner-take-all broadcast",
+          "dependencies": ["T1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "T1.3",
+          "name": "Orchestrator State Machine",
+          "description": "Implement deterministic transition logic (PLANNING, EXECUTING, VALIDATING, etc.)",
+          "dependencies": ["T1.1"],
+          "status": "pending"
+        },
+        {
+          "id": "T1.4",
+          "name": "Memory Hierarchy L0-L2",
+          "description": "Implement Working (Redis), Episodic (Vector DB), and Semantic (Knowledge Graph) memory",
+          "dependencies": [],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PHASE_2",
+      "name": "Phase 2: Agent Ecosystem",
+      "status": "pending",
+      "dependencies": ["PHASE_1"],
+      "tasks": [
+        {
+          "id": "T2.1",
+          "name": "Full Agent Taxonomy Deployment",
+          "description": "Implement all 25 specialized agent types (Cognitive, Perceptual, Memory, etc.)",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T2.2",
+          "name": "Tribe v2 Management",
+          "description": "Implement team formation, role inheritance, and inter-tribe routing",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T2.3",
+          "name": "LLM Council Deliberation",
+          "description": "Implement voting, strategic coordination protocol, and chair/member roles",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T2.4",
+          "name": "Full MCP Server Deployment",
+          "description": "Deploy tools, skills, ssh, and code MCP servers",
+          "dependencies": [],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PHASE_3",
+      "name": "Phase 3: Self-Improvement",
+      "status": "pending",
+      "dependencies": ["PHASE_2"],
+      "tasks": [
+        {
+          "id": "T3.1",
+          "name": "Observation Agent",
+          "description": "Implement reliability scoring, bottleneck detection, and performance metrics monitoring",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T3.2",
+          "name": "Genesis Agent",
+          "description": "Implement automated agent scaffolding, A/B testing, and promotion logic",
+          "dependencies": ["T3.1"],
+          "status": "pending"
+        },
+        {
+          "id": "T3.3",
+          "name": "AutoResearch Agent (ARA)",
+          "description": "Implement cognitive self-experimentation loop and experiment ledger",
+          "dependencies": ["T3.1"],
+          "status": "pending"
+        },
+        {
+          "id": "T3.4",
+          "name": "Evolutionary Role Discovery (ERD)",
+          "description": "Implement agent configuration as genomes and niche discovery from task clusters",
+          "dependencies": ["T3.3"],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PHASE_4",
+      "name": "Phase 4: Production Hardening",
+      "status": "pending",
+      "dependencies": ["PHASE_2"],
+      "tasks": [
+        {
+          "id": "T4.1",
+          "name": "Sovereign Domain Mesh",
+          "description": "Implement federated nodes with mTLS, JWT auth, and ACL enforcement",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T4.2",
+          "name": "Backup & Resilience Layers",
+          "description": "Implement automated failover, L1-L4 backup layers, and state reconstruction",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T4.3",
+          "name": "Circuit Breakers & BFT",
+          "description": "Implement per-agent circuit breakers and Byzantine Fault Tolerance for high-stakes tasks",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T4.4",
+          "name": "MARVIN Evaluation Suite (MES)",
+          "description": "Deploy full benchmarking suite with CI/CD integration and statistical rigor",
+          "dependencies": [],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PHASE_5",
+      "name": "Phase 5: Advanced Cognition",
+      "status": "pending",
+      "dependencies": ["PHASE_3", "PHASE_4"],
+      "tasks": [
+        {
+          "id": "T5.1",
+          "name": "Neuro-Symbolic ISG-DD",
+          "description": "Implement iterative semantic grounding with divergence detection for symbolic logic",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T5.2",
+          "name": "Multi-Timescale Workspace (AMTW)",
+          "description": "Implement partitioned lanes (Fast, Medium, Slow) for asynchronous synchronization",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T5.3",
+          "name": "Counterfactual Credit Assignment (CCT)",
+          "description": "Implement Shapley-based credit assignment via shadow replays",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T5.4",
+          "name": "Dempster-Shafer Evidence Fusion",
+          "description": "Implement evidence combination across multiple critic agents",
+          "dependencies": [],
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PHASE_6",
+      "name": "Phase 6: Autonomous Operation",
+      "status": "pending",
+      "dependencies": ["PHASE_5"],
+      "tasks": [
+        {
+          "id": "T6.1",
+          "name": "Full Closed-Loop Self-Improvement",
+          "description": "Enable optimization loop without human intervention",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T6.2",
+          "name": "Cross-Domain Federated Learning",
+          "description": "Implement federated improvement without data egress",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T6.3",
+          "name": "Graceful Human-in-the-Loop Escalation",
+          "description": "Optimize escalation protocols for 95% autonomous completion",
+          "dependencies": [],
+          "status": "pending"
+        },
+        {
+          "id": "T6.4",
+          "name": "Zero-Downtime Continuous Deployment",
+          "description": "Automate updates for all components with zero availability loss",
+          "dependencies": [],
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
