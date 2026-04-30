@@ -641,7 +641,7 @@
     {
       "id": "PHASE_1",
       "name": "Phase 1: Core Cognition",
-      "status": "pending",
+      "status": "completed",
       "dependencies": ["PHASE_0"],
       "tasks": [
         {
@@ -649,28 +649,28 @@
           "name": "Cognitive Workspace Store",
           "description": "Implement blackboard architecture for shared state with defined JSON schema",
           "dependencies": [],
-          "status": "pending"
+          "status": "completed"
         },
         {
           "id": "T1.2",
           "name": "Ignition Engine v1",
           "description": "Implement salience scoring with fixed weights and winner-take-all broadcast",
           "dependencies": ["T1.1"],
-          "status": "pending"
+          "status": "completed"
         },
         {
           "id": "T1.3",
           "name": "Orchestrator State Machine",
           "description": "Implement deterministic transition logic (PLANNING, EXECUTING, VALIDATING, etc.)",
           "dependencies": ["T1.1"],
-          "status": "pending"
+          "status": "completed"
         },
         {
           "id": "T1.4",
           "name": "Memory Hierarchy L0-L2",
           "description": "Implement Working (Redis), Episodic (Vector DB), and Semantic (Knowledge Graph) memory",
           "dependencies": [],
-          "status": "pending"
+          "status": "completed"
         }
       ]
     },
